@@ -50,6 +50,7 @@ Partial Class FrmPrincipale
         BtnRechrecher = New MaterialSkin.Controls.MaterialButton()
         BtnReintialiser = New MaterialSkin.Controls.MaterialButton()
         MaterialDivider1 = New MaterialSkin.Controls.MaterialDivider()
+        BtnCloturer = New MaterialSkin.Controls.MaterialButton()
         CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
         MenuStrip1.SuspendLayout()
         Panel1.SuspendLayout()
@@ -59,7 +60,7 @@ Partial Class FrmPrincipale
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Font = New Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label1.Font = New Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point)
         Label1.Location = New Point(76, 115)
         Label1.Name = "Label1"
         Label1.Size = New Size(47, 23)
@@ -69,7 +70,7 @@ Partial Class FrmPrincipale
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Font = New Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label2.Font = New Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point)
         Label2.Location = New Point(76, 178)
         Label2.Name = "Label2"
         Label2.Size = New Size(66, 23)
@@ -84,7 +85,7 @@ Partial Class FrmPrincipale
         DataGridView1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single
         DataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle1.BackColor = SystemColors.ActiveCaption
-        DataGridViewCellStyle1.Font = New Font("Segoe UI", 9F)
+        DataGridViewCellStyle1.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
         DataGridViewCellStyle1.ForeColor = SystemColors.InfoText
         DataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight
         DataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText
@@ -97,7 +98,7 @@ Partial Class FrmPrincipale
         DataGridView1.ReadOnly = True
         DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle2.BackColor = SystemColors.ActiveCaption
-        DataGridViewCellStyle2.Font = New Font("Segoe UI", 9F)
+        DataGridViewCellStyle2.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
         DataGridViewCellStyle2.ForeColor = SystemColors.WindowText
         DataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight
         DataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText
@@ -158,8 +159,8 @@ Partial Class FrmPrincipale
         ' Label3
         ' 
         Label3.AutoSize = True
-        Label3.Font = New Font("Segoe UI Semibold", 10.2F, FontStyle.Bold)
-        Label3.Location = New Point(71, 18)
+        Label3.Font = New Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point)
+        Label3.Location = New Point(7, 18)
         Label3.Name = "Label3"
         Label3.Size = New Size(83, 23)
         Label3.TabIndex = 9
@@ -168,8 +169,8 @@ Partial Class FrmPrincipale
         ' Label4
         ' 
         Label4.AutoSize = True
-        Label4.Font = New Font("Segoe UI Semibold", 10.2F, FontStyle.Bold)
-        Label4.Location = New Point(294, 18)
+        Label4.Font = New Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point)
+        Label4.Location = New Point(230, 18)
         Label4.Name = "Label4"
         Label4.Size = New Size(138, 23)
         Label4.TabIndex = 10
@@ -178,8 +179,8 @@ Partial Class FrmPrincipale
         ' LblDatabase
         ' 
         LblDatabase.AutoSize = True
-        LblDatabase.Font = New Font("Segoe UI Semibold", 10.2F, FontStyle.Bold)
-        LblDatabase.Location = New Point(426, 19)
+        LblDatabase.Font = New Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point)
+        LblDatabase.Location = New Point(362, 19)
         LblDatabase.Name = "LblDatabase"
         LblDatabase.Size = New Size(24, 23)
         LblDatabase.TabIndex = 11
@@ -188,8 +189,8 @@ Partial Class FrmPrincipale
         ' lblServeur
         ' 
         lblServeur.AutoSize = True
-        lblServeur.Font = New Font("Segoe UI Semibold", 10.2F, FontStyle.Bold)
-        lblServeur.Location = New Point(150, 18)
+        lblServeur.Font = New Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point)
+        lblServeur.Location = New Point(86, 18)
         lblServeur.Name = "lblServeur"
         lblServeur.Size = New Size(24, 23)
         lblServeur.TabIndex = 12
@@ -226,6 +227,7 @@ Partial Class FrmPrincipale
         ' 
         ' Panel2
         ' 
+        Panel2.Controls.Add(BtnCloturer)
         Panel2.Controls.Add(BtnDecolture)
         Panel2.Controls.Add(Label3)
         Panel2.Controls.Add(lblServeur)
@@ -348,6 +350,25 @@ Partial Class FrmPrincipale
         MaterialDivider1.TabIndex = 20
         MaterialDivider1.Text = "MaterialDivider1"
         ' 
+        ' BtnCloturer
+        ' 
+        BtnCloturer.AutoSizeMode = AutoSizeMode.GrowAndShrink
+        BtnCloturer.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default
+        BtnCloturer.Depth = 0
+        BtnCloturer.HighEmphasis = True
+        BtnCloturer.Icon = Nothing
+        BtnCloturer.Location = New Point(595, 12)
+        BtnCloturer.Margin = New Padding(4, 6, 4, 6)
+        BtnCloturer.MouseState = MaterialSkin.MouseState.HOVER
+        BtnCloturer.Name = "BtnCloturer"
+        BtnCloturer.NoAccentTextColor = Color.Empty
+        BtnCloturer.Size = New Size(94, 36)
+        BtnCloturer.TabIndex = 14
+        BtnCloturer.Text = "CLOTURER"
+        BtnCloturer.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained
+        BtnCloturer.UseAccentColor = False
+        BtnCloturer.UseVisualStyleBackColor = True
+        ' 
         ' FrmPrincipale
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
@@ -404,6 +425,7 @@ Partial Class FrmPrincipale
     Friend WithEvents BtnReintialiser As MaterialSkin.Controls.MaterialButton
     Friend WithEvents BtnDecolture As MaterialSkin.Controls.MaterialButton
     Friend WithEvents MaterialDivider1 As MaterialSkin.Controls.MaterialDivider
+    Friend WithEvents BtnCloturer As MaterialSkin.Controls.MaterialButton
 
 
 End Class

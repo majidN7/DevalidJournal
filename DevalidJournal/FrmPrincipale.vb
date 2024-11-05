@@ -6,12 +6,8 @@ Public Class FrmPrincipale
     ' Récupérer la connexion depuis FrmCnx
     Dim connection = FrmCnx.connection
     Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
-        MessageBox.Show("hado ce sont les mois de Janvier a Décember")
+
     End Sub
-
-
-
-
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles Me.Load
 
@@ -52,7 +48,7 @@ Public Class FrmPrincipale
 
 
     Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
-        MessageBox.Show("hado les journaux gher chof m3a Abdellah.")
+
     End Sub
 
     Private Sub FermerToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FermerToolStripMenuItem.Click
@@ -141,12 +137,45 @@ Public Class FrmPrincipale
             ' Get the value of a specific cell in the selected row (e.g., the first column)
             Dim JOURNAL As String = DataGridView1.Rows(selectedRowIndex).Cells(0).Value.ToString()
             Dim MOIS As String = DataGridView1.Rows(selectedRowIndex).Cells(1).Value.Month.ToString()
-            MessageBox.Show("wach sur tu veux décolturer le Journal: " & JOURNAL & "    " & "du Mois: " & MOIS)
+            MessageBox.Show("Voulez-vous décolturez le Journal: " & JOURNAL & "    " & "du Mois: " & MOIS & " ?")
 
 
 
             ' Créer la commande SQL
             Using MyCommand As New SqlCommand("update F_ECRITUREC set EC_Cloture='1' where Month(jm_date)=@MOIS and JO_Num=@JRNL ", connection)
+                ' Ajout explicite du paramètre avec son type
+                MyCommand.Parameters.Add("@JRNL", SqlDbType.VarChar).Value = JOURNAL
+                MyCommand.Parameters.Add("@MOIS", SqlDbType.VarChar).Value = MOIS
+
+                Dim rowsAffected As Integer = MyCommand.ExecuteNonQuery()
+
+                ' Display how many rows were updated
+                MessageBox.Show(rowsAffected & "ligne mis à jour.")
+                connection.Close()
+            End Using
+        Else
+            MessageBox.Show("Merci de séléctionner une ligne.")
+        End If
+    End Sub
+
+    Private Sub BtnCloturer_Click(sender As Object, e As EventArgs) Handles BtnCloturer.Click
+        If connection.State <> ConnectionState.Open Then
+            connection.Open()
+        End If
+
+        If DataGridView1.SelectedRows.Count > 0 Then
+            ' Get the index of the selected row
+            Dim selectedRowIndex As Integer = DataGridView1.SelectedRows(0).Index
+
+            ' Get the value of a specific cell in the selected row (e.g., the first column)
+            Dim JOURNAL As String = DataGridView1.Rows(selectedRowIndex).Cells(0).Value.ToString()
+            Dim MOIS As String = DataGridView1.Rows(selectedRowIndex).Cells(1).Value.Month.ToString()
+            MessageBox.Show("Voulez-vous colturez le Journal: " & JOURNAL & "    " & "du Mois: " & MOIS & " ?")
+
+
+
+            ' Créer la commande SQL
+            Using MyCommand As New SqlCommand("update F_ECRITUREC set EC_Cloture='0' where Month(jm_date)=@MOIS and JO_Num=@JRNL ", connection)
                 ' Ajout explicite du paramètre avec son type
                 MyCommand.Parameters.Add("@JRNL", SqlDbType.VarChar).Value = JOURNAL
                 MyCommand.Parameters.Add("@MOIS", SqlDbType.VarChar).Value = MOIS

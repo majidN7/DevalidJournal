@@ -1,0 +1,11 @@
+is_global = true
+build_property.ApplicationManifest = 
+build_property.StartupObject = Sub Main
+build_property.ApplicationDefaultFont = 
+build_property.ApplicationHighDpiMode = 
+build_property.ApplicationUseCompatibleTextRendering = 
+build_property.ApplicationVisualStyles = 
+build_property.RootNamespace = DevalidJournal
+build_property.ProjectDir = C:\Users\dell\source\repos\DevalidJournal\DevalidJournal\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 

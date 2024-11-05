@@ -25,3 +25,4 @@ C:\Users\dell\source\repos\DevalidJournal\DevalidJournal\obj\Debug\net8.0-window
 C:\Users\dell\source\repos\DevalidJournal\DevalidJournal\obj\Debug\net8.0-windows\DevalidJournal.pdb
 C:\Users\dell\source\repos\DevalidJournal\DevalidJournal\obj\Debug\net8.0-windows\DevalidJournal.genruntimeconfig.cache
 C:\Users\dell\source\repos\DevalidJournal\DevalidJournal\obj\Debug\net8.0-windows\ref\DevalidJournal.dll
+C:\Users\dell\source\repos\DevalidJournal\DevalidJournal\obj\Debug\net8.0-windows\DevalidJournal.sourcelink.json
