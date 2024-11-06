@@ -44,13 +44,13 @@ Partial Class FrmPrincipale
         Label5 = New Label()
         Panel1 = New Panel()
         Panel2 = New Panel()
+        BtnCloturer = New MaterialSkin.Controls.MaterialButton()
         BtnDecolture = New MaterialSkin.Controls.MaterialButton()
         List_Mois = New MaterialSkin.Controls.MaterialComboBox()
         List_JNL = New MaterialSkin.Controls.MaterialComboBox()
         BtnRechrecher = New MaterialSkin.Controls.MaterialButton()
         BtnReintialiser = New MaterialSkin.Controls.MaterialButton()
         MaterialDivider1 = New MaterialSkin.Controls.MaterialDivider()
-        BtnCloturer = New MaterialSkin.Controls.MaterialButton()
         CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
         MenuStrip1.SuspendLayout()
         Panel1.SuspendLayout()
@@ -238,6 +238,25 @@ Partial Class FrmPrincipale
         Panel2.Size = New Size(893, 59)
         Panel2.TabIndex = 14
         ' 
+        ' BtnCloturer
+        ' 
+        BtnCloturer.AutoSizeMode = AutoSizeMode.GrowAndShrink
+        BtnCloturer.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default
+        BtnCloturer.Depth = 0
+        BtnCloturer.HighEmphasis = True
+        BtnCloturer.Icon = Nothing
+        BtnCloturer.Location = New Point(595, 12)
+        BtnCloturer.Margin = New Padding(4, 6, 4, 6)
+        BtnCloturer.MouseState = MaterialSkin.MouseState.HOVER
+        BtnCloturer.Name = "BtnCloturer"
+        BtnCloturer.NoAccentTextColor = Color.Empty
+        BtnCloturer.Size = New Size(94, 36)
+        BtnCloturer.TabIndex = 14
+        BtnCloturer.Text = "Dé-Colturer"
+        BtnCloturer.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained
+        BtnCloturer.UseAccentColor = False
+        BtnCloturer.UseVisualStyleBackColor = True
+        ' 
         ' BtnDecolture
         ' 
         BtnDecolture.AutoSizeMode = AutoSizeMode.GrowAndShrink
@@ -250,9 +269,9 @@ Partial Class FrmPrincipale
         BtnDecolture.MouseState = MaterialSkin.MouseState.HOVER
         BtnDecolture.Name = "BtnDecolture"
         BtnDecolture.NoAccentTextColor = Color.Empty
-        BtnDecolture.Size = New Size(117, 36)
+        BtnDecolture.Size = New Size(94, 36)
         BtnDecolture.TabIndex = 13
-        BtnDecolture.Text = "Dé-Colturer"
+        BtnDecolture.Text = "CLOTURER"
         BtnDecolture.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained
         BtnDecolture.UseAccentColor = False
         BtnDecolture.UseVisualStyleBackColor = True
@@ -349,25 +368,6 @@ Partial Class FrmPrincipale
         MaterialDivider1.Size = New Size(994, 10)
         MaterialDivider1.TabIndex = 20
         MaterialDivider1.Text = "MaterialDivider1"
-        ' 
-        ' BtnCloturer
-        ' 
-        BtnCloturer.AutoSizeMode = AutoSizeMode.GrowAndShrink
-        BtnCloturer.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default
-        BtnCloturer.Depth = 0
-        BtnCloturer.HighEmphasis = True
-        BtnCloturer.Icon = Nothing
-        BtnCloturer.Location = New Point(595, 12)
-        BtnCloturer.Margin = New Padding(4, 6, 4, 6)
-        BtnCloturer.MouseState = MaterialSkin.MouseState.HOVER
-        BtnCloturer.Name = "BtnCloturer"
-        BtnCloturer.NoAccentTextColor = Color.Empty
-        BtnCloturer.Size = New Size(94, 36)
-        BtnCloturer.TabIndex = 14
-        BtnCloturer.Text = "CLOTURER"
-        BtnCloturer.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained
-        BtnCloturer.UseAccentColor = False
-        BtnCloturer.UseVisualStyleBackColor = True
         ' 
         ' FrmPrincipale
         ' 

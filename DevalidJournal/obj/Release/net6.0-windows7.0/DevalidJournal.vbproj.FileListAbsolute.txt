@@ -1,15 +1,12 @@
 C:\Users\dell\source\repos\DevalidJournal\DevalidJournal\bin\Release\net6.0-windows7.0\DevalidJournal.exe
-C:\Users\dell\source\repos\DevalidJournal\DevalidJournal\bin\Release\net6.0-windows7.0\DevalidJournal.deps.json
-C:\Users\dell\source\repos\DevalidJournal\DevalidJournal\bin\Release\net6.0-windows7.0\DevalidJournal.runtimeconfig.json
 C:\Users\dell\source\repos\DevalidJournal\DevalidJournal\bin\Release\net6.0-windows7.0\DevalidJournal.dll
-C:\Users\dell\source\repos\DevalidJournal\DevalidJournal\bin\Release\net6.0-windows7.0\DevalidJournal.pdb
 C:\Users\dell\source\repos\DevalidJournal\DevalidJournal\bin\Release\net6.0-windows7.0\MaterialSkin.dll
+C:\Users\dell\source\repos\DevalidJournal\DevalidJournal\bin\Release\net6.0-windows7.0\runtimes\win-x64\native\sni.dll
+C:\Users\dell\source\repos\DevalidJournal\DevalidJournal\bin\Release\net6.0-windows7.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\dell\source\repos\DevalidJournal\DevalidJournal\bin\Release\net6.0-windows7.0\System.Data.SqlClient.dll
 C:\Users\dell\source\repos\DevalidJournal\DevalidJournal\bin\Release\net6.0-windows7.0\runtimes\win-arm64\native\sni.dll
-C:\Users\dell\source\repos\DevalidJournal\DevalidJournal\bin\Release\net6.0-windows7.0\runtimes\win-x64\native\sni.dll
 C:\Users\dell\source\repos\DevalidJournal\DevalidJournal\bin\Release\net6.0-windows7.0\runtimes\win-x86\native\sni.dll
 C:\Users\dell\source\repos\DevalidJournal\DevalidJournal\bin\Release\net6.0-windows7.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
-C:\Users\dell\source\repos\DevalidJournal\DevalidJournal\bin\Release\net6.0-windows7.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\dell\source\repos\DevalidJournal\DevalidJournal\obj\Release\net6.0-windows7.0\DevalidJournal.vbproj.AssemblyReference.cache
 C:\Users\dell\source\repos\DevalidJournal\DevalidJournal\obj\Release\net6.0-windows7.0\DevalidJournal.FrmApropos.resources
 C:\Users\dell\source\repos\DevalidJournal\DevalidJournal\obj\Release\net6.0-windows7.0\DevalidJournal.FrmCnx.resources
@@ -24,5 +21,8 @@ C:\Users\dell\source\repos\DevalidJournal\DevalidJournal\obj\Release\net6.0-wind
 C:\Users\dell\source\repos\DevalidJournal\DevalidJournal\obj\Release\net6.0-windows7.0\DevalidJournal.dll
 C:\Users\dell\source\repos\DevalidJournal\DevalidJournal\obj\Release\net6.0-windows7.0\refint\DevalidJournal.dll
 C:\Users\dell\source\repos\DevalidJournal\DevalidJournal\obj\Release\net6.0-windows7.0\DevalidJournal.pdb
+C:\Users\dell\source\repos\DevalidJournal\DevalidJournal\bin\Release\net6.0-windows7.0\DevalidJournal.deps.json
+C:\Users\dell\source\repos\DevalidJournal\DevalidJournal\bin\Release\net6.0-windows7.0\DevalidJournal.runtimeconfig.json
+C:\Users\dell\source\repos\DevalidJournal\DevalidJournal\bin\Release\net6.0-windows7.0\DevalidJournal.pdb
 C:\Users\dell\source\repos\DevalidJournal\DevalidJournal\obj\Release\net6.0-windows7.0\DevalidJournal.genruntimeconfig.cache
 C:\Users\dell\source\repos\DevalidJournal\DevalidJournal\obj\Release\net6.0-windows7.0\ref\DevalidJournal.dll

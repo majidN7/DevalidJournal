@@ -83,7 +83,9 @@ Public Class FrmPrincipale
 
         Try
             ' Créer la commande SQL
-            Using MyCommand As New SqlCommand("SELECT JO_Num , JM_Date , EC_Date, EC_RefPiece, EC_Intitule , EC_Cloture  FROM F_ECRITUREC WHERE JO_Num = @JNL and Month(JM_Date)=@Mois", connection)
+            Using MyCommand As New SqlCommand("SELECT JO_Num , JM_Date , EC_Date, EC_RefPiece, EC_Intitule , 
+                                                CASE When EC_Cloture='1' then 'Cloturer' When EC_Cloture='0' then 'Non cloturer' END
+                                                FROM F_ECRITUREC WHERE JO_Num = @JNL and Month(JM_Date)=@Mois", connection)
                 ' Ajout explicite du paramètre avec son type
                 MyCommand.Parameters.Add("@JNL", SqlDbType.VarChar).Value = List_JNL.Text
                 MyCommand.Parameters.Add("@Mois", SqlDbType.VarChar).Value = List_Mois.Text
