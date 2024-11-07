@@ -250,9 +250,9 @@ Partial Class FrmPrincipale
         BtnCloturer.MouseState = MaterialSkin.MouseState.HOVER
         BtnCloturer.Name = "BtnCloturer"
         BtnCloturer.NoAccentTextColor = Color.Empty
-        BtnCloturer.Size = New Size(94, 36)
+        BtnCloturer.Size = New Size(117, 36)
         BtnCloturer.TabIndex = 14
-        BtnCloturer.Text = "Dé-Colturer"
+        BtnCloturer.Text = "Déclôturer"
         BtnCloturer.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained
         BtnCloturer.UseAccentColor = False
         BtnCloturer.UseVisualStyleBackColor = True

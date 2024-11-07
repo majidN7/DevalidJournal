@@ -139,7 +139,7 @@ Public Class FrmPrincipale
             ' Get the value of a specific cell in the selected row (e.g., the first column)
             Dim JOURNAL As String = DataGridView1.Rows(selectedRowIndex).Cells(0).Value.ToString()
             Dim MOIS As String = DataGridView1.Rows(selectedRowIndex).Cells(1).Value.Month.ToString()
-            MessageBox.Show("Voulez-vous décolturez le Journal: " & JOURNAL & "    " & "du Mois: " & MOIS & " ?")
+            MessageBox.Show("Voulez-vous déclôturer le journal: " & JOURNAL & "    " & "du Mois: " & MOIS & " ?")
 
 
 
@@ -172,7 +172,7 @@ Public Class FrmPrincipale
             ' Get the value of a specific cell in the selected row (e.g., the first column)
             Dim JOURNAL As String = DataGridView1.Rows(selectedRowIndex).Cells(0).Value.ToString()
             Dim MOIS As String = DataGridView1.Rows(selectedRowIndex).Cells(1).Value.Month.ToString()
-            MessageBox.Show("Voulez-vous colturez le Journal: " & JOURNAL & "    " & "du Mois: " & MOIS & " ?")
+            MessageBox.Show("Voulez vous clôturer le journal: " & JOURNAL & "    " & "du Mois: " & MOIS & " ?")
 
 
 
