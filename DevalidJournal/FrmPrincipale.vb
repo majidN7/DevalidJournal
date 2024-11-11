@@ -2,9 +2,10 @@
 
 
 Public Class FrmPrincipale
-    ' Dim connection As New SqlConnection("Server=.; Database = BIJOU; Integrated Security = true")
+    Dim connection As New SqlConnection("Server=BADEEL-SHARESRV\SAGE100; Database = BADEEL; Integrated Security = true")
     ' Récupérer la connexion depuis FrmCnx
-    Dim connection = FrmCnx.connection
+    'Dim connection = FrmCnx.connection
+
     Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
 
     End Sub
@@ -17,6 +18,7 @@ Public Class FrmPrincipale
         Dim dtable As DataTable
         Dim ds As DataSet
         Dim ds_mois As DataSet
+        Dim ds_annee As DataSet
 
         Dim adp = New SqlDataAdapter()
         adp.SelectCommand = New SqlCommand("Select Distinct JO_Num FROM F_ECRITUREC", connection)
@@ -30,13 +32,23 @@ Public Class FrmPrincipale
         Next
 
         Dim adp_mois = New SqlDataAdapter()
-        adp_mois.SelectCommand = New SqlCommand("SELECT DISTINCT MONTH(EC_Date) FROM F_ECRITUREC", connection)
+        adp_mois.SelectCommand = New SqlCommand("SELECT DISTINCT MONTH(EC_Date) FROM F_ECRITUREC ORDER BY MONTH(EC_Date) ASC", connection)
 
         ds_mois = New DataSet("ds_mois")
         adp_mois.Fill(ds_mois)
         dtable = ds_mois.Tables(0)
         For Each drow As DataRow In dtable.Rows
             List_Mois.Items.Add(drow(0).ToString)
+        Next
+
+        Dim adp_annee = New SqlDataAdapter()
+        adp_annee.SelectCommand = New SqlCommand("SELECT DISTINCT YEAR(EC_Date) FROM F_ECRITUREC ORDER BY YEAR(EC_Date) ASC", connection)
+
+        ds_annee = New DataSet("ds_annee")
+        adp_annee.Fill(ds_annee)
+        dtable = ds_annee.Tables(0)
+        For Each drow As DataRow In dtable.Rows
+            ListAnnee.Items.Add(drow(0).ToString)
         Next
 
 
@@ -85,10 +97,11 @@ Public Class FrmPrincipale
             ' Créer la commande SQL
             Using MyCommand As New SqlCommand("SELECT JO_Num , JM_Date , EC_Date, EC_RefPiece, EC_Intitule , 
                                                 CASE When EC_Cloture='1' then 'Cloturer' When EC_Cloture='0' then 'Non cloturer' END
-                                                FROM F_ECRITUREC WHERE JO_Num = @JNL and Month(JM_Date)=@Mois", connection)
+                                                FROM F_ECRITUREC WHERE JO_Num = @JNL and Month(JM_Date)=@Mois and Year(JM_Date)=@Annee", connection)
                 ' Ajout explicite du paramètre avec son type
                 MyCommand.Parameters.Add("@JNL", SqlDbType.VarChar).Value = List_JNL.Text
                 MyCommand.Parameters.Add("@Mois", SqlDbType.VarChar).Value = List_Mois.Text
+                MyCommand.Parameters.Add("@Annee", SqlDbType.VarChar).Value = ListAnnee.Text
 
                 ' Utiliser SqlDataAdapter avec l'objet SqlCommand
                 Using adapter As New SqlDataAdapter(MyCommand)
@@ -125,6 +138,7 @@ Public Class FrmPrincipale
     Private Sub BtnReintialiser_Click(sender As Object, e As EventArgs) Handles BtnReintialiser.Click
         List_JNL.Text = ""
         List_Mois.Text = ""
+        ListAnnee.Text = ""
     End Sub
 
     Private Sub BtnDecolture_Click(sender As Object, e As EventArgs) Handles BtnDecolture.Click
@@ -139,7 +153,7 @@ Public Class FrmPrincipale
             ' Get the value of a specific cell in the selected row (e.g., the first column)
             Dim JOURNAL As String = DataGridView1.Rows(selectedRowIndex).Cells(0).Value.ToString()
             Dim MOIS As String = DataGridView1.Rows(selectedRowIndex).Cells(1).Value.Month.ToString()
-            MessageBox.Show("Voulez-vous déclôturer le journal: " & JOURNAL & "    " & "du Mois: " & MOIS & " ?")
+            MessageBox.Show("Voulez-vous clôturer le journal: " & JOURNAL & "    " & "du Mois: " & MOIS & " ?")
 
 
 
@@ -151,10 +165,21 @@ Public Class FrmPrincipale
 
                 Dim rowsAffected As Integer = MyCommand.ExecuteNonQuery()
 
-                ' Display how many rows were updated
-                MessageBox.Show(rowsAffected & "ligne mis à jour.")
+
+            End Using
+
+            Using MyCommand2 As New SqlCommand("update F_JMOUV SET JM_Cloture='2' WHERE MONTH(JM_Date)=@MOIS and JO_Num=@JRNL ", connection)
+                ' Ajout explicite du paramètre avec son type
+                MyCommand2.Parameters.Add("@JRNL", SqlDbType.VarChar).Value = JOURNAL
+                MyCommand2.Parameters.Add("@MOIS", SqlDbType.VarChar).Value = MOIS
+
+                Dim rowsAffected As Integer = MyCommand2.ExecuteNonQuery()
+
+
                 connection.Close()
             End Using
+
+
         Else
             MessageBox.Show("Merci de séléctionner une ligne.")
         End If
@@ -172,7 +197,7 @@ Public Class FrmPrincipale
             ' Get the value of a specific cell in the selected row (e.g., the first column)
             Dim JOURNAL As String = DataGridView1.Rows(selectedRowIndex).Cells(0).Value.ToString()
             Dim MOIS As String = DataGridView1.Rows(selectedRowIndex).Cells(1).Value.Month.ToString()
-            MessageBox.Show("Voulez vous clôturer le journal: " & JOURNAL & "    " & "du Mois: " & MOIS & " ?")
+            MessageBox.Show("Voulez vous déclôturer le journal: " & JOURNAL & "    " & "du Mois: " & MOIS & " ?")
 
 
 
@@ -184,10 +209,20 @@ Public Class FrmPrincipale
 
                 Dim rowsAffected As Integer = MyCommand.ExecuteNonQuery()
 
-                ' Display how many rows were updated
-                MessageBox.Show(rowsAffected & "ligne mis à jour.")
+
+            End Using
+
+            Using MyCommand2 As New SqlCommand("update F_JMOUV SET JM_Cloture='0' WHERE MONTH(JM_Date)=@MOIS and JO_Num=@JRNL ", connection)
+                ' Ajout explicite du paramètre avec son type
+                MyCommand2.Parameters.Add("@JRNL", SqlDbType.VarChar).Value = JOURNAL
+                MyCommand2.Parameters.Add("@MOIS", SqlDbType.VarChar).Value = MOIS
+
+                Dim rowsAffected As Integer = MyCommand2.ExecuteNonQuery()
+
+
                 connection.Close()
             End Using
+
         Else
             MessageBox.Show("Merci de séléctionner une ligne.")
         End If

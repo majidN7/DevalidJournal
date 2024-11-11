@@ -51,6 +51,8 @@ Partial Class FrmPrincipale
         BtnRechrecher = New MaterialSkin.Controls.MaterialButton()
         BtnReintialiser = New MaterialSkin.Controls.MaterialButton()
         MaterialDivider1 = New MaterialSkin.Controls.MaterialDivider()
+        ListAnnee = New MaterialSkin.Controls.MaterialComboBox()
+        Label6 = New Label()
         CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
         MenuStrip1.SuspendLayout()
         Panel1.SuspendLayout()
@@ -61,7 +63,7 @@ Partial Class FrmPrincipale
         ' 
         Label1.AutoSize = True
         Label1.Font = New Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point)
-        Label1.Location = New Point(76, 115)
+        Label1.Location = New Point(76, 185)
         Label1.Name = "Label1"
         Label1.Size = New Size(47, 23)
         Label1.TabIndex = 2
@@ -71,7 +73,7 @@ Partial Class FrmPrincipale
         ' 
         Label2.AutoSize = True
         Label2.Font = New Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point)
-        Label2.Location = New Point(76, 178)
+        Label2.Location = New Point(76, 248)
         Label2.Name = "Label2"
         Label2.Size = New Size(66, 23)
         Label2.TabIndex = 3
@@ -85,20 +87,20 @@ Partial Class FrmPrincipale
         DataGridView1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single
         DataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle1.BackColor = SystemColors.ActiveCaption
-        DataGridViewCellStyle1.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
+        DataGridViewCellStyle1.Font = New Font("Segoe UI", 9.0F, FontStyle.Regular, GraphicsUnit.Point)
         DataGridViewCellStyle1.ForeColor = SystemColors.InfoText
         DataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight
         DataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText
         DataGridViewCellStyle1.WrapMode = DataGridViewTriState.True
         DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridView1.Location = New Point(12, 225)
+        DataGridView1.Location = New Point(12, 301)
         DataGridView1.MultiSelect = False
         DataGridView1.Name = "DataGridView1"
         DataGridView1.ReadOnly = True
         DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle2.BackColor = SystemColors.ActiveCaption
-        DataGridViewCellStyle2.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
+        DataGridViewCellStyle2.Font = New Font("Segoe UI", 9.0F, FontStyle.Regular, GraphicsUnit.Point)
         DataGridViewCellStyle2.ForeColor = SystemColors.WindowText
         DataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight
         DataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText
@@ -170,7 +172,7 @@ Partial Class FrmPrincipale
         ' 
         Label4.AutoSize = True
         Label4.Font = New Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point)
-        Label4.Location = New Point(230, 18)
+        Label4.Location = New Point(358, 18)
         Label4.Name = "Label4"
         Label4.Size = New Size(138, 23)
         Label4.TabIndex = 10
@@ -180,7 +182,7 @@ Partial Class FrmPrincipale
         ' 
         LblDatabase.AutoSize = True
         LblDatabase.Font = New Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point)
-        LblDatabase.Location = New Point(362, 19)
+        LblDatabase.Location = New Point(490, 19)
         LblDatabase.Name = "LblDatabase"
         LblDatabase.Size = New Size(24, 23)
         LblDatabase.TabIndex = 11
@@ -220,7 +222,7 @@ Partial Class FrmPrincipale
         Panel1.Controls.Add(LinkLabel1)
         Panel1.Controls.Add(Label5)
         Panel1.Dock = DockStyle.Bottom
-        Panel1.Location = New Point(3, 570)
+        Panel1.Location = New Point(3, 644)
         Panel1.Name = "Panel1"
         Panel1.Size = New Size(980, 50)
         Panel1.TabIndex = 13
@@ -233,7 +235,7 @@ Partial Class FrmPrincipale
         Panel2.Controls.Add(lblServeur)
         Panel2.Controls.Add(Label4)
         Panel2.Controls.Add(LblDatabase)
-        Panel2.Location = New Point(12, 483)
+        Panel2.Location = New Point(12, 548)
         Panel2.Name = "Panel2"
         Panel2.Size = New Size(893, 59)
         Panel2.TabIndex = 14
@@ -245,12 +247,12 @@ Partial Class FrmPrincipale
         BtnCloturer.Depth = 0
         BtnCloturer.HighEmphasis = True
         BtnCloturer.Icon = Nothing
-        BtnCloturer.Location = New Point(595, 12)
+        BtnCloturer.Location = New Point(655, 12)
         BtnCloturer.Margin = New Padding(4, 6, 4, 6)
         BtnCloturer.MouseState = MaterialSkin.MouseState.HOVER
         BtnCloturer.Name = "BtnCloturer"
         BtnCloturer.NoAccentTextColor = Color.Empty
-        BtnCloturer.Size = New Size(117, 36)
+        BtnCloturer.Size = New Size(113, 36)
         BtnCloturer.TabIndex = 14
         BtnCloturer.Text = "Déclôturer"
         BtnCloturer.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained
@@ -264,7 +266,7 @@ Partial Class FrmPrincipale
         BtnDecolture.Depth = 0
         BtnDecolture.HighEmphasis = True
         BtnDecolture.Icon = Nothing
-        BtnDecolture.Location = New Point(736, 12)
+        BtnDecolture.Location = New Point(795, 12)
         BtnDecolture.Margin = New Padding(4, 6, 4, 6)
         BtnDecolture.MouseState = MaterialSkin.MouseState.HOVER
         BtnDecolture.Name = "BtnDecolture"
@@ -285,12 +287,12 @@ Partial Class FrmPrincipale
         List_Mois.DropDownHeight = 174
         List_Mois.DropDownStyle = ComboBoxStyle.DropDownList
         List_Mois.DropDownWidth = 121
-        List_Mois.Font = New Font("Roboto Medium", 14F, FontStyle.Bold, GraphicsUnit.Pixel)
+        List_Mois.Font = New Font("Roboto Medium", 14.0F, FontStyle.Bold, GraphicsUnit.Pixel)
         List_Mois.ForeColor = Color.FromArgb(CByte(222), CByte(0), CByte(0), CByte(0))
         List_Mois.FormattingEnabled = True
         List_Mois.IntegralHeight = False
         List_Mois.ItemHeight = 43
-        List_Mois.Location = New Point(206, 96)
+        List_Mois.Location = New Point(206, 166)
         List_Mois.MaxDropDownItems = 4
         List_Mois.MouseState = MaterialSkin.MouseState.OUT
         List_Mois.Name = "List_Mois"
@@ -307,12 +309,12 @@ Partial Class FrmPrincipale
         List_JNL.DropDownHeight = 174
         List_JNL.DropDownStyle = ComboBoxStyle.DropDownList
         List_JNL.DropDownWidth = 121
-        List_JNL.Font = New Font("Roboto Medium", 14F, FontStyle.Bold, GraphicsUnit.Pixel)
+        List_JNL.Font = New Font("Roboto Medium", 14.0F, FontStyle.Bold, GraphicsUnit.Pixel)
         List_JNL.ForeColor = Color.FromArgb(CByte(222), CByte(0), CByte(0), CByte(0))
         List_JNL.FormattingEnabled = True
         List_JNL.IntegralHeight = False
         List_JNL.ItemHeight = 43
-        List_JNL.Location = New Point(206, 165)
+        List_JNL.Location = New Point(206, 235)
         List_JNL.MaxDropDownItems = 4
         List_JNL.MouseState = MaterialSkin.MouseState.OUT
         List_JNL.Name = "List_JNL"
@@ -327,7 +329,7 @@ Partial Class FrmPrincipale
         BtnRechrecher.Depth = 0
         BtnRechrecher.HighEmphasis = True
         BtnRechrecher.Icon = Nothing
-        BtnRechrecher.Location = New Point(729, 109)
+        BtnRechrecher.Location = New Point(729, 179)
         BtnRechrecher.Margin = New Padding(4, 6, 4, 6)
         BtnRechrecher.MouseState = MaterialSkin.MouseState.HOVER
         BtnRechrecher.Name = "BtnRechrecher"
@@ -346,7 +348,7 @@ Partial Class FrmPrincipale
         BtnReintialiser.Depth = 0
         BtnReintialiser.HighEmphasis = True
         BtnReintialiser.Icon = Nothing
-        BtnReintialiser.Location = New Point(729, 178)
+        BtnReintialiser.Location = New Point(729, 248)
         BtnReintialiser.Margin = New Padding(4, 6, 4, 6)
         BtnReintialiser.MouseState = MaterialSkin.MouseState.HOVER
         BtnReintialiser.Name = "BtnReintialiser"
@@ -362,18 +364,52 @@ Partial Class FrmPrincipale
         ' 
         MaterialDivider1.BackColor = Color.FromArgb(CByte(30), CByte(0), CByte(0), CByte(0))
         MaterialDivider1.Depth = 0
-        MaterialDivider1.Location = New Point(-2, 561)
+        MaterialDivider1.Location = New Point(-2, 619)
         MaterialDivider1.MouseState = MaterialSkin.MouseState.HOVER
         MaterialDivider1.Name = "MaterialDivider1"
         MaterialDivider1.Size = New Size(994, 10)
         MaterialDivider1.TabIndex = 20
         MaterialDivider1.Text = "MaterialDivider1"
         ' 
+        ' ListAnnee
+        ' 
+        ListAnnee.AutoResize = False
+        ListAnnee.BackColor = Color.FromArgb(CByte(255), CByte(255), CByte(255))
+        ListAnnee.Depth = 0
+        ListAnnee.DrawMode = DrawMode.OwnerDrawVariable
+        ListAnnee.DropDownHeight = 174
+        ListAnnee.DropDownStyle = ComboBoxStyle.DropDownList
+        ListAnnee.DropDownWidth = 121
+        ListAnnee.Font = New Font("Roboto Medium", 14.0F, FontStyle.Bold, GraphicsUnit.Pixel)
+        ListAnnee.ForeColor = Color.FromArgb(CByte(222), CByte(0), CByte(0), CByte(0))
+        ListAnnee.FormattingEnabled = True
+        ListAnnee.IntegralHeight = False
+        ListAnnee.ItemHeight = 43
+        ListAnnee.Location = New Point(206, 95)
+        ListAnnee.MaxDropDownItems = 4
+        ListAnnee.MouseState = MaterialSkin.MouseState.OUT
+        ListAnnee.Name = "ListAnnee"
+        ListAnnee.Size = New Size(389, 49)
+        ListAnnee.StartIndex = 0
+        ListAnnee.TabIndex = 21
+        ' 
+        ' Label6
+        ' 
+        Label6.AutoSize = True
+        Label6.Font = New Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point)
+        Label6.Location = New Point(76, 107)
+        Label6.Name = "Label6"
+        Label6.Size = New Size(59, 23)
+        Label6.TabIndex = 22
+        Label6.Text = "Année"
+        ' 
         ' FrmPrincipale
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
+        AutoScaleDimensions = New SizeF(8.0F, 20.0F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(986, 623)
+        ClientSize = New Size(986, 697)
+        Controls.Add(Label6)
+        Controls.Add(ListAnnee)
         Controls.Add(MaterialDivider1)
         Controls.Add(BtnReintialiser)
         Controls.Add(BtnRechrecher)
@@ -426,6 +462,8 @@ Partial Class FrmPrincipale
     Friend WithEvents BtnDecolture As MaterialSkin.Controls.MaterialButton
     Friend WithEvents MaterialDivider1 As MaterialSkin.Controls.MaterialDivider
     Friend WithEvents BtnCloturer As MaterialSkin.Controls.MaterialButton
+    Friend WithEvents ListAnnee As MaterialSkin.Controls.MaterialComboBox
+    Friend WithEvents Label6 As Label
 
 
 End Class

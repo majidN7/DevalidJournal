@@ -95,7 +95,7 @@ Partial Class FrmCnx
         ' Label4
         ' 
         Label4.AutoSize = True
-        Label4.Font = New Font("Segoe UI Semibold", 10.2F, FontStyle.Bold)
+        Label4.Font = New Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point)
         Label4.Location = New Point(184, 182)
         Label4.Name = "Label4"
         Label4.Size = New Size(113, 23)
@@ -105,7 +105,7 @@ Partial Class FrmCnx
         ' Label3
         ' 
         Label3.AutoSize = True
-        Label3.Font = New Font("Segoe UI Semibold", 10.2F, FontStyle.Bold)
+        Label3.Font = New Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point)
         Label3.Location = New Point(210, 133)
         Label3.Name = "Label3"
         Label3.Size = New Size(87, 23)
@@ -115,7 +115,7 @@ Partial Class FrmCnx
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Font = New Font("Segoe UI Semibold", 10.2F, FontStyle.Bold)
+        Label2.Font = New Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point)
         Label2.Location = New Point(158, 84)
         Label2.Name = "Label2"
         Label2.Size = New Size(139, 23)
@@ -125,7 +125,7 @@ Partial Class FrmCnx
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Font = New Font("Segoe UI Semibold", 10.2F, FontStyle.Bold)
+        Label1.Font = New Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point)
         Label1.Location = New Point(193, 35)
         Label1.Name = "Label1"
         Label1.Size = New Size(104, 23)

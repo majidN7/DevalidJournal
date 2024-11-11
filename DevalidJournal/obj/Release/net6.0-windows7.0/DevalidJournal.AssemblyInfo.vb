@@ -17,7 +17,7 @@ Imports System.Reflection
  Assembly: System.Reflection.AssemblyConfigurationAttribute("Release"),  _
  Assembly: System.Reflection.AssemblyCopyrightAttribute("tous les droits réservé au Majid"),  _
  Assembly: System.Reflection.AssemblyFileVersionAttribute("1.0"),  _
- Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c40ef37dfc43da7516e9f58edda06aec3b327f4f"),  _
+ Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f3bf4a8cd8ce5400dea291b716c7f7f6211d1056"),  _
  Assembly: System.Reflection.AssemblyProductAttribute("DevalidJournal"),  _
  Assembly: System.Reflection.AssemblyTitleAttribute("DevalidJournal"),  _
  Assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0"),  _
